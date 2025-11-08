@@ -258,26 +258,6 @@
         .dcg-content a:hover {
             text-decoration-thickness: 2px;
         }
-        
-        @media (max-width: 1024px) {
-            .dcg-toc {
-                position: relative;
-                top: auto;
-                max-height: none;
-                overflow: visible;
-            }
-
-            .dcg-toc h3 {
-                cursor: pointer;
-                background: #f1f5f9;
-                padding: .5rem .75rem;
-                border-radius: 8px;
-            }
-
-            .dcg-toc.collapsed a {
-                display: none;
-            }
-        }
     </style>
 
     <div class="dcg-wrap" role="region" aria-label="Guide body">
@@ -529,12 +509,5 @@
             }, { rootMargin: '-40% 0px -55% 0px', threshold: 0.01 });
             sections.forEach(sec => io.observe(sec));
         })();
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toc = document.querySelector('.dcg-toc');
-            const heading = toc.querySelector('h3');
-            heading.addEventListener('click', () => toc.classList.toggle('collapsed'));
-        });
     </script>
 </section>
